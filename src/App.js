@@ -64,8 +64,8 @@ class App extends React.Component {
     return (
       <div>
         <h2>Todo List</h2>
-        {/* <TodoList tasks={this.state.tasks} toggleTask={this.toggleTask} /> */}
-        {/* <TodoForm addTodo={this.addTodo} clearCompleted={this.clearCompleted} /> */}
+        <TodoList tasks={this.state.tasks} toggleTask={this.toggleTask} />
+        <TodoForm addTodo={this.addTodo} clearCompleted={this.clearCompleted} />
       </div>
     );
   }
