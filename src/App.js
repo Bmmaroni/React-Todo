@@ -16,15 +16,13 @@ class App extends React.Component {
     };
   };
 
-  addTask = (e) => {
+  addTask = (e, task) => {
     e.preventDefault();
-    
     const newTask = {
-      name: "",
+      name: task,
       completed: false,
       id: Date.now()
     };
-
     this.setState({
       ...this.state,
       tasks: [...this.state.tasks, newTask]
@@ -32,9 +30,7 @@ class App extends React.Component {
   };
 
   toggleTask = (taskId) => {
-    
     console.log('toggling item', taskId);
-
     this.setState({
       ...this.state,
       tasks: this.state.tasks.map((task) => {
@@ -51,9 +47,7 @@ class App extends React.Component {
   };
 
   clearCompleted = (e) => {
-
     e.preventDefault();
-
     this.setState({
       ...this.state,
       tasks: this.state.tasks.filter((task) => !task.completed)
